@@ -8,6 +8,7 @@ import { registerSimulateInputTool } from './tools/simulateInputTool.js';
 import { registerQueryGameStateTool } from './tools/queryGameStateTool.js';
 import { registerGetConsoleLogsTool } from './tools/getConsoleLogsTool.js';
 import { registerRecordVideoTool } from './tools/recordVideoTool.js';
+import { registerSpawnPlayerTool } from './tools/joinPlayerTool.js';
 // Initialize loggers
 const serverLogger = new Logger('Server', LogLevel.INFO);
 const unityLogger = new Logger('Unity', LogLevel.INFO);
@@ -30,6 +31,7 @@ registerSimulateInputTool(server, playtestUnity, toolLogger);
 registerQueryGameStateTool(server, playtestUnity, toolLogger);
 registerGetConsoleLogsTool(server, playtestUnity, toolLogger);
 registerRecordVideoTool(server, playtestUnity, toolLogger);
+registerSpawnPlayerTool(server, playtestUnity, toolLogger);
 // Server startup
 async function startServer() {
     try {

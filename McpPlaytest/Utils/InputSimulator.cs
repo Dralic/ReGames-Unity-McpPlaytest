@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,73 +9,40 @@ namespace McpPlaytest
 {
     public static class InputSimulator
     {
-        private static readonly Dictionary<int, InputSimulationState> _activeSimulations = new Dictionary<int, InputSimulationState>();
-
-        private class InputSimulationState
-        {
-            public PlayerController controller;
-            public string action;
-            public float endTime;
-            public Vector2 moveValue;
-        }
-
         public static JObject SimulateAction(string action, int playerIndex, JObject value, float duration)
         {
-            var controller = FindPlayerController(playerIndex);
-            if (controller == null)
-            {
-                return PlaytestSocketHandler.CreateErrorResponse($"Player {playerIndex} not found", "player_not_found");
-            }
-
             switch (action)
             {
                 case "move":
-                    return SimulateMove(controller, playerIndex, value, duration);
+                    return SimulateMove(playerIndex, value, duration);
                 case "melee_attack":
-                    return SimulateButtonPress(controller, "OnMeleeAttack");
                 case "ranged_attack":
-                    return SimulateButtonPress(controller, "OnRangedAttack");
                 case "throw_attack":
-                    return SimulateButtonPress(controller, "OnThrowAttack");
                 case "special_ability":
-                    return SimulateButtonPress(controller, "OnSpecialAbility");
+                    return SimulateButton(playerIndex, action);
                 case "stop":
-                    return SimulateMove(controller, playerIndex, null, 0f);
+                    return SimulateMove(playerIndex, null, 0f);
                 default:
                     return PlaytestSocketHandler.CreateErrorResponse($"Unknown action: {action}. Valid: move, melee_attack, ranged_attack, throw_attack, special_ability, stop", "validation_error");
             }
         }
 
-        private static JObject SimulateMove(PlayerController controller, int playerIndex, JObject value, float duration)
+        private static JObject SimulateMove(int playerIndex, JObject value, float duration)
         {
             float x = value?["x"]?.ToObject<float>() ?? 0f;
             float y = value?["y"]?.ToObject<float>() ?? 0f;
 
-            // Use the PlayerInput component to inject input via the Input System
-            var playerInput = controller.playerInput;
+            var playerInput = FindPlayerInput(playerIndex);
             if (playerInput == null)
             {
-                return PlaytestSocketHandler.CreateErrorResponse("PlayerInput component not found", "input_error");
-            }
-
-            // Find the device paired to this player
-            var devices = playerInput.devices;
-            if (devices.Count == 0)
-            {
-                // If no device is paired, try using InputSystem to queue a virtual gamepad event
-                return SimulateMoveViaAction(controller, x, y, duration, playerIndex);
+                return PlaytestSocketHandler.CreateErrorResponse($"Player {playerIndex} not found", "player_not_found");
             }
 
             // Try to find a gamepad among paired devices
-            Gamepad gamepad = null;
-            foreach (var device in devices)
-            {
-                if (device is Gamepad gp) { gamepad = gp; break; }
-            }
+            Gamepad gamepad = FindGamepad(playerInput);
 
             if (gamepad != null)
             {
-                // Change the gamepad's left stick state directly
                 InputState.Change(gamepad.leftStick, new Vector2(x, y));
 
                 if (duration > 0f)
@@ -95,144 +61,140 @@ namespace McpPlaytest
                 };
             }
 
-            // Fallback to action-based simulation
-            return SimulateMoveViaAction(controller, x, y, duration, playerIndex);
+            // No gamepad found - try to find any device with a stick/vector2 control for Move action
+            var moveAction = playerInput.actions?.FindAction("Move");
+            if (moveAction != null)
+            {
+                foreach (var control in moveAction.controls)
+                {
+                    if (control is Vector2Control vec2)
+                    {
+                        InputState.Change(vec2, new Vector2(x, y));
+
+                        return new JObject
+                        {
+                            ["success"] = true,
+                            ["action"] = "move",
+                            ["playerIndex"] = playerIndex,
+                            ["appliedValue"] = new JObject { ["x"] = x, ["y"] = y },
+                            ["duration"] = duration,
+                            ["method"] = "action_control"
+                        };
+                    }
+                }
+            }
+
+            return PlaytestSocketHandler.CreateErrorResponse("Could not inject movement input: no suitable device or control found", "input_error");
         }
 
-        private static JObject SimulateMoveViaAction(PlayerController controller, float x, float y, float duration, int playerIndex)
+        private static JObject SimulateButton(int playerIndex, string action)
         {
-            // Directly set the moveInput through the PlayerInput action
-            var playerInput = controller.playerInput;
-            if (playerInput != null)
+            // Try the bridge interface first for game-specific button handling
+            var bridge = FindInputReceiverBridge();
+            if (bridge != null)
             {
-                var moveAction = playerInput.actions?.FindAction("Move");
-                if (moveAction != null)
+                var bridgeResult = bridge.SimulateButtonPress(playerIndex, action);
+                if (bridgeResult != null && bridgeResult["success"]?.ToObject<bool>() == true)
                 {
-                    // We can't easily inject values into actions without a device,
-                    // so use reflection to set moveInput directly
-                    var moveInputField = typeof(PlayerController).GetProperty("moveInput");
-                    if (moveInputField != null && moveInputField.CanWrite)
-                    {
-                        moveInputField.SetValue(controller, new Vector2(x, y));
-                    }
-                    else
-                    {
-                        // Use the private backing field via reflection
-                        var field = typeof(PlayerController).GetField("<moveInput>k__BackingField",
-                            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                        if (field != null)
-                        {
-                            field.SetValue(controller, new Vector2(x, y));
-                        }
-                    }
+                    return bridgeResult;
+                }
+            }
 
-                    if (duration > 0f)
-                    {
-                        _activeSimulations[playerIndex] = new InputSimulationState
-                        {
-                            controller = controller,
-                            action = "move",
-                            endTime = Time.realtimeSinceStartup + duration,
-                            moveValue = new Vector2(x, y)
-                        };
+            // Fall back to generic gamepad button simulation
+            var playerInput = FindPlayerInput(playerIndex);
+            if (playerInput == null)
+            {
+                return PlaytestSocketHandler.CreateErrorResponse($"Player {playerIndex} not found", "player_not_found");
+            }
 
-                        UnityEditor.EditorApplication.update += CheckSimulationExpiry;
-                    }
+            Gamepad gamepad = FindGamepad(playerInput);
+            if (gamepad != null)
+            {
+                InputControl button = MapActionToGamepadButton(gamepad, action);
+
+                if (button is ButtonControl btn)
+                {
+                    InputState.Change(btn, 1f);
+
+                    UnityEditor.EditorApplication.delayCall += () =>
+                    {
+                        InputState.Change(btn, 0f);
+                    };
 
                     return new JObject
                     {
                         ["success"] = true,
-                        ["action"] = "move",
+                        ["action"] = action,
                         ["playerIndex"] = playerIndex,
-                        ["appliedValue"] = new JObject { ["x"] = x, ["y"] = y },
-                        ["duration"] = duration,
-                        ["method"] = "reflection"
+                        ["method"] = "gamepad_button"
                     };
                 }
             }
 
-            return PlaytestSocketHandler.CreateErrorResponse("Could not inject movement input", "input_error");
-        }
-
-        private static JObject SimulateButtonPress(PlayerController controller, string callbackName)
-        {
-            // Use the PlayerInput component's device to simulate a button press
-            var playerInput = controller.playerInput;
-            if (playerInput != null)
+            // Last resort: try to trigger the action directly via its bound controls
+            var inputAction = FindInputAction(playerInput, action);
+            if (inputAction != null)
             {
-                var devices = playerInput.devices;
-                Gamepad gamepad = null;
-                foreach (var device in devices)
+                foreach (var control in inputAction.controls)
                 {
-                    if (device is Gamepad gp) { gamepad = gp; break; }
-                }
-
-                if (gamepad != null)
-                {
-                    // Map callback names to gamepad buttons
-                    InputControl button = null;
-                    switch (callbackName)
+                    if (control is ButtonControl actionBtn)
                     {
-                        case "OnMeleeAttack": button = gamepad.buttonEast; break;
-                        case "OnRangedAttack": button = gamepad.buttonSouth; break;
-                        case "OnThrowAttack": button = gamepad.buttonWest; break;
-                        case "OnSpecialAbility": button = gamepad.buttonNorth; break;
-                    }
-
-                    if (button is ButtonControl btn)
-                    {
-                        // Press then release
-                        InputState.Change(btn, 1f);
+                        InputState.Change(actionBtn, 1f);
 
                         UnityEditor.EditorApplication.delayCall += () =>
                         {
-                            InputState.Change(btn, 0f);
+                            InputState.Change(actionBtn, 0f);
                         };
 
                         return new JObject
                         {
                             ["success"] = true,
-                            ["action"] = callbackName.Replace("On", "").ToLower(),
-                            ["playerIndex"] = controller.playerIndex,
-                            ["method"] = "gamepad_button"
+                            ["action"] = action,
+                            ["playerIndex"] = playerIndex,
+                            ["method"] = "action_control"
                         };
                     }
                 }
             }
 
-            // Fallback: use reflection to set the pressed bool directly
-            string fieldName = callbackName switch
-            {
-                "OnMeleeAttack" => "meleeAttackPressed",
-                "OnRangedAttack" => "rangedAttackPressed",
-                "OnThrowAttack" => "throwAttackPressed",
-                "OnSpecialAbility" => "specialAbilityPressed",
-                _ => null
-            };
+            return PlaytestSocketHandler.CreateErrorResponse($"Could not simulate {action}: no suitable device, control, or IPlaytestInputReceiver found", "input_error");
+        }
 
-            if (fieldName != null)
+        private static InputAction FindInputAction(PlayerInput playerInput, string action)
+        {
+            if (playerInput.actions == null) return null;
+
+            // Try common naming conventions for the action
+            // Capitalize first letter of each segment
+            string[] parts = action.Split('_');
+            for (int i = 0; i < parts.Length; i++)
             {
-                var prop = typeof(PlayerController).GetProperty(fieldName);
-                if (prop != null)
+                if (parts[i].Length > 0)
                 {
-                    // These are auto-properties with private set, use backing field
-                    var field = typeof(PlayerController).GetField($"<{fieldName}>k__BackingField",
-                        System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                    if (field != null)
-                    {
-                        field.SetValue(controller, true);
-                        return new JObject
-                        {
-                            ["success"] = true,
-                            ["action"] = callbackName.Replace("On", "").ToLower(),
-                            ["playerIndex"] = controller.playerIndex,
-                            ["method"] = "reflection"
-                        };
-                    }
+                    parts[i] = char.ToUpper(parts[i][0]) + parts[i].Substring(1);
                 }
             }
+            string joined = string.Join("", parts);
 
-            return PlaytestSocketHandler.CreateErrorResponse($"Could not simulate {callbackName}", "input_error");
+            var found = playerInput.actions.FindAction(joined);
+            if (found != null) return found;
+
+            found = playerInput.actions.FindAction(action);
+            if (found != null) return found;
+
+            return null;
+        }
+
+        private static InputControl MapActionToGamepadButton(Gamepad gamepad, string action)
+        {
+            switch (action)
+            {
+                case "melee_attack": return gamepad.buttonEast;
+                case "ranged_attack": return gamepad.buttonSouth;
+                case "throw_attack": return gamepad.buttonWest;
+                case "special_ability": return gamepad.buttonNorth;
+                default: return null;
+            }
         }
 
         private static void ScheduleMoveReset(Gamepad gamepad, int playerIndex, float duration)
@@ -255,63 +217,47 @@ namespace McpPlaytest
             UnityEditor.EditorApplication.update += ResetCheck;
         }
 
-        private static void CheckSimulationExpiry()
+        private static PlayerInput FindPlayerInput(int playerIndex)
         {
-            var expired = new List<int>();
-
-            foreach (var kvp in _activeSimulations)
+            // Try the bridge interface first
+            var bridge = FindInputReceiverBridge();
+            if (bridge != null)
             {
-                if (Time.realtimeSinceStartup >= kvp.Value.endTime)
+                var found = bridge.FindPlayerInput(playerIndex);
+                if (found != null) return found;
+            }
+
+            // Universal fallback: search all PlayerInput components in the scene
+            foreach (var pi in PlayerInput.all)
+            {
+                if (pi.playerIndex == playerIndex)
                 {
-                    expired.Add(kvp.Key);
-
-                    // Reset the move input
-                    var field = typeof(PlayerController).GetField("<moveInput>k__BackingField",
-                        System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                    if (field != null && kvp.Value.controller != null)
-                    {
-                        field.SetValue(kvp.Value.controller, Vector2.zero);
-                    }
-                }
-            }
-
-            foreach (var key in expired)
-            {
-                _activeSimulations.Remove(key);
-            }
-
-            if (_activeSimulations.Count == 0)
-            {
-                UnityEditor.EditorApplication.update -= CheckSimulationExpiry;
-            }
-        }
-
-        private static PlayerController FindPlayerController(int playerIndex)
-        {
-            // Try GameManager first
-            var gm = GameManager.instance;
-            if (gm != null && gm.players != null)
-            {
-                for (int i = 0; i < gm.players.Count; i++)
-                {
-                    if (gm.players[i].playerIndex == playerIndex && gm.players[i].controller != null)
-                    {
-                        return gm.players[i].controller;
-                    }
-                }
-            }
-
-            // Fallback: find all PlayerControllers in scene
-            var controllers = UnityEngine.Object.FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            foreach (var ctrl in controllers)
-            {
-                if (ctrl.playerIndex == playerIndex)
-                {
-                    return ctrl;
+                    return pi;
                 }
             }
 
             return null;
+        }
+
+        private static Gamepad FindGamepad(PlayerInput playerInput)
+        {
+            if (playerInput == null) return null;
+
+            var devices = playerInput.devices;
+            foreach (var device in devices)
+            {
+                if (device is Gamepad gp)
+                {
+                    return gp;
+                }
+            }
+
+            return null;
+        }
+
+        private static IPlaytestInputReceiver FindInputReceiverBridge()
+        {
+            return PlaytestBridge.InputReceiver;
         }
     }
 }

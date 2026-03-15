@@ -158,6 +158,10 @@ namespace McpPlaytest
             // Video recording
             var recordVideo = new RecordVideoTool();
             _tools.Add(recordVideo.Name, recordVideo);
+
+            // Player spawning
+            var spawnPlayer = new SpawnPlayerTool();
+            _tools.Add(spawnPlayer.Name, spawnPlayer);
         }
 
         // KEY DIFFERENCE: We do NOT stop on ExitingEditMode!

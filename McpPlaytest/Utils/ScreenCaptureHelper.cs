@@ -9,65 +9,47 @@ namespace McpPlaytest
     {
         public static string CaptureGameViewAsBase64(int width, int height)
         {
-            // Try Game View RenderTexture approach first
-            string result = CaptureViaGameView(width, height);
+            // Primary: render all cameras to a RenderTexture (works without window focus)
+            string result = CaptureViaAllCameras(width, height);
             if (!string.IsNullOrEmpty(result)) return result;
 
-            // Fallback to ScreenCapture
-            return CaptureViaScreenCapture(width, height);
+            // Fallback: try reading the Game View's render texture
+            result = CaptureViaGameView(width, height);
+            if (!string.IsNullOrEmpty(result)) return result;
+
+            return null;
         }
 
-        private static string CaptureViaGameView(int width, int height)
+        private static string CaptureViaAllCameras(int width, int height)
         {
             try
             {
-                // Get the Game View window via reflection
-                var gameViewType = Type.GetType("UnityEditor.GameView,UnityEditor");
-                if (gameViewType == null) return null;
+                var cameras = Camera.allCameras;
+                if (cameras.Length == 0) return null;
 
-                var gameView = EditorWindow.GetWindow(gameViewType, false, null, false);
-                if (gameView == null) return null;
+                var rt = new RenderTexture(width, height, 24, RenderTextureFormat.ARGB32);
+                rt.antiAliasing = 1;
+                rt.Create();
 
-                // Try to get the render texture from the game view
-                var renderTextureField = gameViewType.GetProperty("targetTexture", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+                // Sort cameras by depth (lowest renders first)
+                System.Array.Sort(cameras, (a, b) => a.depth.CompareTo(b.depth));
 
-                // Alternative: use the targetDisplay approach
-                if (renderTextureField == null)
+                foreach (var cam in cameras)
                 {
-                    // Try getting the render texture through the view's camera
-                    return CaptureViaCamera(width, height);
+                    if (!cam.enabled || !cam.gameObject.activeInHierarchy)
+                    {
+                        continue;
+                    }
+
+                    var previousTarget = cam.targetTexture;
+                    cam.targetTexture = rt;
+                    cam.Render();
+                    cam.targetTexture = previousTarget;
                 }
-
-                var renderTexture = renderTextureField.GetValue(gameView) as RenderTexture;
-                if (renderTexture == null)
-                {
-                    return CaptureViaCamera(width, height);
-                }
-
-                return ReadRenderTextureToBase64(renderTexture, width, height);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        private static string CaptureViaCamera(int width, int height)
-        {
-            try
-            {
-                var mainCam = Camera.main;
-                if (mainCam == null) return null;
-
-                var rt = new RenderTexture(width, height, 24);
-                var previousTarget = mainCam.targetTexture;
-
-                mainCam.targetTexture = rt;
-                mainCam.Render();
-                mainCam.targetTexture = previousTarget;
 
                 string result = ReadRenderTextureToBase64(rt, width, height);
 
+                rt.Release();
                 UnityEngine.Object.DestroyImmediate(rt);
 
                 return result;
@@ -78,35 +60,31 @@ namespace McpPlaytest
             }
         }
 
-        private static string CaptureViaScreenCapture(int width, int height)
+        private static string CaptureViaGameView(int width, int height)
         {
             try
             {
-                var texture = ScreenCapture.CaptureScreenshotAsTexture();
-                if (texture == null) return null;
+                var gameViewType = Type.GetType("UnityEditor.GameView,UnityEditor");
+                if (gameViewType == null) return null;
 
-                // Resize if needed
-                if (texture.width != width || texture.height != height)
-                {
-                    var resized = new Texture2D(width, height, TextureFormat.RGB24, false);
-                    var rt = RenderTexture.GetTemporary(width, height);
-                    Graphics.Blit(texture, rt);
+                // Don't focus the Game View window
+                var gameView = EditorWindow.GetWindow(gameViewType, false, null, false);
+                if (gameView == null) return null;
 
-                    var previousActive = RenderTexture.active;
-                    RenderTexture.active = rt;
-                    resized.ReadPixels(new Rect(0, 0, width, height), 0, 0);
-                    resized.Apply();
-                    RenderTexture.active = previousActive;
-                    RenderTexture.ReleaseTemporary(rt);
+                // Force a repaint so the render texture is up to date
+                gameView.Repaint();
 
-                    UnityEngine.Object.DestroyImmediate(texture);
-                    texture = resized;
-                }
+                var renderTextureField = gameViewType.GetProperty(
+                    "targetTexture",
+                    BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public
+                );
 
-                byte[] pngBytes = texture.EncodeToPNG();
-                UnityEngine.Object.DestroyImmediate(texture);
+                if (renderTextureField == null) return null;
 
-                return Convert.ToBase64String(pngBytes);
+                var renderTexture = renderTextureField.GetValue(gameView) as RenderTexture;
+                if (renderTexture == null) return null;
+
+                return ReadRenderTextureToBase64(renderTexture, width, height);
             }
             catch (Exception)
             {

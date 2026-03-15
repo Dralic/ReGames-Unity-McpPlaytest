@@ -1,0 +1,91 @@
+[
+  {
+    "timestamp": "2026-03-15T19:05:08.835728",
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "hook_event_name": "PostToolUseFailure",
+    "tool_name": "mcp__mcp-playtest__query_game_state",
+    "tool_use_id": "toolu_01HNFLVujVFj1M8FpBkrnhxm",
+    "tool_input": {
+      "query": "full"
+    },
+    "error": "Unknown error",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "raw_input": {
+      "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+      "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+      "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+      "permission_mode": "bypassPermissions",
+      "hook_event_name": "PostToolUseFailure",
+      "tool_name": "mcp__mcp-playtest__query_game_state",
+      "tool_input": {
+        "query": "full"
+      },
+      "tool_use_id": "toolu_01HNFLVujVFj1M8FpBkrnhxm",
+      "error": "Unknown error",
+      "is_interrupt": false,
+      "logged_at": "2026-03-15T19:05:08.835728"
+    }
+  },
+  {
+    "timestamp": "2026-03-15T19:07:40.153915",
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "hook_event_name": "PostToolUseFailure",
+    "tool_name": "mcp__mcp-playtest__query_game_state",
+    "tool_use_id": "toolu_01Re4Eytq6FXactN56h8uUDL",
+    "tool_input": {
+      "query": "full"
+    },
+    "error": "Unknown error",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "raw_input": {
+      "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+      "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+      "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+      "permission_mode": "bypassPermissions",
+      "hook_event_name": "PostToolUseFailure",
+      "tool_name": "mcp__mcp-playtest__query_game_state",
+      "tool_input": {
+        "query": "full"
+      },
+      "tool_use_id": "toolu_01Re4Eytq6FXactN56h8uUDL",
+      "error": "Unknown error",
+      "is_interrupt": false,
+      "logged_at": "2026-03-15T19:07:40.153915"
+    }
+  },
+  {
+    "timestamp": "2026-03-15T19:11:00.085642",
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "hook_event_name": "PostToolUseFailure",
+    "tool_name": "mcp__mcp-playtest__capture_screenshot",
+    "tool_use_id": "toolu_01R66peXGB64K8drCQroSu4S",
+    "tool_input": {
+      "width": 960,
+      "height": 540
+    },
+    "error": "Request timed out after 30000ms",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "raw_input": {
+      "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+      "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+      "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+      "permission_mode": "bypassPermissions",
+      "hook_event_name": "PostToolUseFailure",
+      "tool_name": "mcp__mcp-playtest__capture_screenshot",
+      "tool_input": {
+        "width": 960,
+        "height": 540
+      },
+      "tool_use_id": "toolu_01R66peXGB64K8drCQroSu4S",
+      "error": "Request timed out after 30000ms",
+      "is_interrupt": false,
+      "logged_at": "2026-03-15T19:11:00.085642"
+    }
+  }
+]

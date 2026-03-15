@@ -6,5 +6,21 @@
     "hook_event_name": "Notification",
     "message": "Claude is waiting for your input",
     "notification_type": "idle_prompt"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input",
+    "notification_type": "idle_prompt"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input",
+    "notification_type": "idle_prompt"
   }
 ]

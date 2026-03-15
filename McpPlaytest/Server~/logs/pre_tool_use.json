@@ -1,107 +1,417 @@
 [
   {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "ToolSearch",
-    "tool_input": {
-      "query": "select:mcp__mcp-unity__recompile_scripts",
-      "max_results": 1
-    },
-    "tool_use_id": "toolu_01LrXGifkBytjQo9CEBJkm8G"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "ToolSearch",
-    "tool_input": {
-      "query": "select:mcp__mcp-unity__recompile_scripts",
-      "max_results": 1
-    },
-    "tool_use_id": "toolu_01SkrZYxxE6xRstQivfuBtZM"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "Glob",
-    "tool_input": {
-      "pattern": ".claude/hooks/**/*"
-    },
-    "tool_use_id": "toolu_01G5wXbHkz7Xc2dduST17GkR"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "mcp__mcp-unity__recompile_scripts",
-    "tool_input": {},
-    "tool_use_id": "toolu_014guEhxcPAKoavHkXgTV82o"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "mcp__mcp-unity__recompile_scripts",
-    "tool_input": {},
-    "tool_use_id": "toolu_01Pg6a6ka28dp8caSwRgkUFi"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "Bash",
-    "tool_input": {
-      "command": "ls -la \"D:/Projects/BomberSquad/.claude/\" 2>/dev/null; echo \"---\"; cat \"D:/Projects/BomberSquad/.claude/settings.json\" 2>/dev/null || echo \"no project settings.json\"; echo \"---\"; cat \"C:/Users/maxim/.claude/settings.json\" 2>/dev/null || echo \"no global settings.json\"",
-      "description": "Find hook configuration files"
-    },
-    "tool_use_id": "toolu_01H9FRHUE5cMEKypBtStyTGc"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
-    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
-    "permission_mode": "bypassPermissions",
-    "hook_event_name": "PreToolUse",
-    "tool_name": "mcp__mcp-unity__recompile_scripts",
-    "tool_input": {},
-    "tool_use_id": "toolu_01XQ7wvaFujgCu4VQ3Kpr8Un"
-  },
-  {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
     "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
     "permission_mode": "bypassPermissions",
     "hook_event_name": "PreToolUse",
     "tool_name": "Read",
     "tool_input": {
-      "file_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\memory\\MEMORY.md"
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Tools\\RecordVideoTool.cs"
     },
-    "tool_use_id": "toolu_01V1YjHBDNBtpvxhuzuN39hK"
+    "tool_use_id": "toolu_01NYqWVhM9d9AQzmq3AZgk79"
   },
   {
-    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
-    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Utils\\ScreenCaptureHelper.cs",
+      "content": "using System;\nusing System.Reflection;\nusing UnityEditor;\nusing UnityEngine;\n\nnamespace McpPlaytest\n{\n    public static class ScreenCaptureHelper\n    {\n        public static string CaptureGameViewAsBase64(int width, int height)\n        {\n            // Primary: render all cameras to a RenderTexture (works without window focus)\n            string result = CaptureViaAllCameras(width, height);\n            if (!string.IsNullOrEmpty(result)) return result;\n\n            // Fallback: try reading the Game View's render texture\n            result = CaptureViaGameView(width, height);\n            if (!string.IsNullOrEmpty(result)) return result;\n\n            return null;\n        }\n\n        private static string CaptureViaAllCameras(int width, int height)\n        {\n            try\n            {\n                var cameras = Camera.allCameras;\n                if (cameras.Length == 0) return null;\n\n                var rt = new RenderTexture(width, height, 24, RenderTextureFormat.ARGB32);\n                rt.antiAliasing = 1;\n                rt.Create();\n\n                // Sort cameras by depth (lowest renders first)\n                System.Array.Sort(cameras, (a, b) => a.depth.CompareTo(b.depth));\n\n                foreach (var cam in cameras)\n                {\n                    if (!cam.enabled || !cam.gameObject.activeInHierarchy)\n                    {\n                        continue;\n                    }\n\n                    var previousTarget = cam.targetTexture;\n                    cam.targetTexture = rt;\n                    cam.Render();\n                    cam.targetTexture = previousTarget;\n                }\n\n                string result = ReadRenderTextureToBase64(rt, width, height);\n\n                rt.Release();\n                UnityEngine.Object.DestroyImmediate(rt);\n\n                return result;\n            }\n            catch (Exception)\n            {\n                return null;\n            }\n        }\n\n        private static string CaptureViaGameView(int width, int height)\n        {\n            try\n            {\n                var gameViewType = Type.GetType(\"UnityEditor.GameView,UnityEditor\");\n                if (gameViewType == null) return null;\n\n                // Don't focus the Game View window\n                var gameView = EditorWindow.GetWindow(gameViewType, false, null, false);\n                if (gameView == null) return null;\n\n                // Force a repaint so the render texture is up to date\n                gameView.Repaint();\n\n                var renderTextureField = gameViewType.GetProperty(\n                    \"targetTexture\",\n                    BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public\n                );\n\n                if (renderTextureField == null) return null;\n\n                var renderTexture = renderTextureField.GetValue(gameView) as RenderTexture;\n                if (renderTexture == null) return null;\n\n                return ReadRenderTextureToBase64(renderTexture, width, height);\n            }\n            catch (Exception)\n            {\n                return null;\n            }\n        }\n\n        private static string ReadRenderTextureToBase64(RenderTexture rt, int width, int height)\n        {\n            var previousActive = RenderTexture.active;\n            RenderTexture.active = rt;\n\n            var texture = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);\n            texture.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);\n            texture.Apply();\n\n            RenderTexture.active = previousActive;\n\n            // Resize if needed\n            if (texture.width != width || texture.height != height)\n            {\n                var resized = new Texture2D(width, height, TextureFormat.RGB24, false);\n                var tempRt = RenderTexture.GetTemporary(width, height);\n                Graphics.Blit(texture, tempRt);\n\n                RenderTexture.active = tempRt;\n                resized.ReadPixels(new Rect(0, 0, width, height), 0, 0);\n                resized.Apply();\n                RenderTexture.active = previousActive;\n                RenderTexture.ReleaseTemporary(tempRt);\n\n                UnityEngine.Object.DestroyImmediate(texture);\n                texture = resized;\n            }\n\n            byte[] pngBytes = texture.EncodeToPNG();\n            UnityEngine.Object.DestroyImmediate(texture);\n\n            return Convert.ToBase64String(pngBytes);\n        }\n    }\n}\n"
+    },
+    "tool_use_id": "toolu_01ScyJr9ENJegtNrFzrpdJ4a"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-unity__recompile_scripts",
+    "tool_input": {},
+    "tool_use_id": "toolu_01X16aBJdCdaVm6p2aDhxuHS"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "ToolSearch",
+    "tool_input": {
+      "query": "mcp playtest spawn",
+      "max_results": 5
+    },
+    "tool_use_id": "toolu_014YhpLQPPbc8GGgoxJvfW2Q"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-unity__load_scene",
+    "tool_input": {
+      "scenePath": "Assets/Scenes/Lobby.unity"
+    },
+    "tool_use_id": "toolu_01HCQFqdYEkBjxatVtKJPfcM"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "enter"
+    },
+    "tool_use_id": "toolu_01EChTgmARu21KWRqFdbzgPg"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__query_game_state",
+    "tool_input": {
+      "query": "full"
+    },
+    "tool_use_id": "toolu_01HNFLVujVFj1M8FpBkrnhxm"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__get_playtest_logs",
+    "tool_input": {
+      "filter": "error"
+    },
+    "tool_use_id": "toolu_018hdRHWy4UdBbKzXzugmowU"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__get_playtest_logs",
+    "tool_input": {
+      "filter": "all",
+      "count": 10
+    },
+    "tool_use_id": "toolu_01MERBiP9qxyX6B93mAvdeNd"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
     "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
     "permission_mode": "bypassPermissions",
     "hook_event_name": "PreToolUse",
     "tool_name": "Read",
     "tool_input": {
-      "file_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\memory\\MEMORY.md"
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Tools\\QueryGameStateTool.cs"
     },
-    "tool_use_id": "toolu_01YCjBUNMxYsMHDDyojvdCVz"
+    "tool_use_id": "toolu_01DM5MoA4Tsx5HRkAkVkaL2s"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "exit"
+    },
+    "tool_use_id": "toolu_01Kj3yveSmuJnKS91eNJcEgx"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\BomberSquadPlaytestBridge.cs"
+    },
+    "tool_use_id": "toolu_01PYAmZm7b9FzpeG83dbKv17"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\BomberSquadPlaytestBridge.cs",
+      "content": "using System.Reflection;\nusing Newtonsoft.Json.Linq;\nusing UnityEditor;\nusing UnityEngine;\nusing UnityEngine.InputSystem;\n\nnamespace McpPlaytest\n{\n    /// <summary>\n    /// BomberSquad-specific implementation of the playtest bridge interfaces.\n    /// Auto-creates itself when entering Play Mode \u00e2\u20ac\u201d no manual setup required.\n    ///\n    /// For other projects: create your own MonoBehaviour implementing IPlaytestGameState\n    /// and/or IPlaytestInputReceiver instead of using this class.\n    /// </summary>\n    [InitializeOnLoad]\n    public class BomberSquadPlaytestBridge : MonoBehaviour, IPlaytestGameState, IPlaytestInputReceiver\n    {\n        private static BomberSquadPlaytestBridge _instance;\n\n        static BomberSquadPlaytestBridge()\n        {\n            EditorApplication.playModeStateChanged -= OnPlayModeChanged;\n            EditorApplication.playModeStateChanged += OnPlayModeChanged;\n        }\n\n        private static void OnPlayModeChanged(PlayModeStateChange state)\n        {\n            if (state == PlayModeStateChange.EnteredPlayMode)\n            {\n                if (_instance != null) return;\n\n                var go = new GameObject(\"[McpPlaytest Bridge]\");\n                go.hideFlags = HideFlags.HideAndDontSave;\n                DontDestroyOnLoad(go);\n                _instance = go.AddComponent<BomberSquadPlaytestBridge>();\n            }\n            else if (state == PlayModeStateChange.ExitingPlayMode)\n            {\n                if (_instance != null)\n                {\n                    DestroyImmediate(_instance.gameObject);\n                    _instance = null;\n                }\n            }\n        }\n\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n        // IPlaytestGameState\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n\n        public JObject QueryFullState()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"isPlayMode\"] = EditorApplication.isPlaying,\n                    [\"gameManagerFound\"] = false,\n                    [\"message\"] = \"GameManager not found. Is a scene with GameManager loaded?\"\n                };\n            }\n\n            var result = new JObject\n            {\n                [\"success\"] = true,\n                [\"isPlayMode\"] = EditorApplication.isPlaying,\n                [\"gameManagerFound\"] = true,\n                [\"currentState\"] = gm.currentState.ToString(),\n                [\"currentRoundNumber\"] = gm.currentRoundNumber,\n                [\"alivePlayerCount\"] = gm.GetAlivePlayerCount(),\n                [\"totalPlayerCount\"] = gm.players?.Count ?? 0\n            };\n\n            result[\"players\"] = this.BuildPlayersArray(gm);\n            result[\"round\"] = this.BuildRoundInfo(gm);\n            result[\"gameMode\"] = this.BuildGameModeInfo(gm);\n\n            return result;\n        }\n\n        public JObject QueryPlayers()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"gameManagerFound\"] = false,\n                    [\"players\"] = new JArray()\n                };\n            }\n\n            return new JObject\n            {\n                [\"success\"] = true,\n                [\"gameManagerFound\"] = true,\n                [\"players\"] = this.BuildPlayersArray(gm)\n            };\n        }\n\n        public JObject QueryRound()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"gameManagerFound\"] = false\n                };\n            }\n\n            return new JObject\n            {\n                [\"success\"] = true,\n                [\"gameManagerFound\"] = true,\n                [\"round\"] = this.BuildRoundInfo(gm)\n            };\n        }\n\n        public JObject QueryGameMode()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"gameManagerFound\"] = false\n                };\n            }\n\n            return new JObject\n            {\n                [\"success\"] = true,\n                [\"gameManagerFound\"] = true,\n                [\"gameMode\"] = this.BuildGameModeInfo(gm)\n            };\n        }\n\n        private JArray BuildPlayersArray(GameManager gm)\n        {\n            var playersArray = new JArray();\n\n            if (gm.players == null) return playersArray;\n\n            for (int i = 0; i < gm.players.Count; i++)\n            {\n                var pd = gm.players[i];\n                var playerObj = new JObject\n                {\n                    [\"playerIndex\"] = pd.playerIndex,\n                    [\"score\"] = pd.score,\n                    [\"kills\"] = pd.kills,\n                    [\"deaths\"] = pd.deaths,\n                    [\"suicides\"] = pd.suicides,\n                    [\"isReady\"] = pd.isReady\n                };\n\n                if (pd.controller != null)\n                {\n                    var pos = pd.controller.transform.position;\n                    playerObj[\"position\"] = new JObject\n                    {\n                        [\"x\"] = pos.x,\n                        [\"y\"] = pos.y,\n                        [\"z\"] = pos.z\n                    };\n\n                    var currentState = pd.controller.stateMachine?.currentState;\n                    playerObj[\"currentState\"] = currentState?.GetType().Name ?? \"Unknown\";\n                    playerObj[\"isAlive\"] = currentState != pd.controller.playerDeathState;\n                    playerObj[\"isActive\"] = pd.controller.gameObject.activeSelf;\n                }\n                else\n                {\n                    playerObj[\"position\"] = null;\n                    playerObj[\"currentState\"] = \"NoController\";\n                    playerObj[\"isAlive\"] = false;\n                    playerObj[\"isActive\"] = false;\n                }\n\n                playersArray.Add(playerObj);\n            }\n\n            return playersArray;\n        }\n\n        private JObject BuildRoundInfo(GameManager gm)\n        {\n            var roundObj = new JObject\n            {\n                [\"currentRoundNumber\"] = gm.currentRoundNumber,\n                [\"currentState\"] = gm.currentState.ToString()\n            };\n\n            if (gm.currentRound != null)\n            {\n                roundObj[\"elapsedTime\"] = gm.currentRound.elapsedTime;\n                roundObj[\"remainingTime\"] = gm.currentRound.remainingTime;\n            }\n\n            return roundObj;\n        }\n\n        private JObject BuildGameModeInfo(GameManager gm)\n        {\n            if (gm.gameMode == null)\n            {\n                return new JObject { [\"available\"] = false };\n            }\n\n            var mode = gm.gameMode;\n            return new JObject\n            {\n                [\"available\"] = true,\n                [\"modeName\"] = mode.modeName,\n                [\"description\"] = mode.description,\n                [\"numberOfRounds\"] = mode.numberOfRounds,\n                [\"roundDuration\"] = mode.roundDuration,\n                [\"roundStartDelay\"] = mode.roundStartDelay,\n                [\"roundEndDelay\"] = mode.roundEndDelay,\n                [\"pointsPerKill\"] = mode.pointsPerKill,\n                [\"suicidePenalty\"] = mode.suicidePenalty,\n                [\"respawnDelay\"] = mode.respawnDelay,\n                [\"maxPlayers\"] = mode.maxPlayers,\n                [\"useLastManStanding\"] = mode.useLastManStanding,\n                [\"allowMeleeWeapons\"] = mode.allowMeleeWeapons,\n                [\"allowRangedWeapons\"] = mode.allowRangedWeapons,\n                [\"allowThrowWeapons\"] = mode.allowThrowWeapons,\n                [\"allowSpecialAbility\"] = mode.allowSpecialAbility\n            };\n        }\n\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n        // IPlaytestInputReceiver\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n\n        public PlayerInput FindPlayerInput(int playerIndex)\n        {\n            var controller = this.FindPlayerController(playerIndex);\n            if (controller == null) return null;\n\n            return controller.playerInput;\n        }\n\n        public JObject SimulateButtonPress(int playerIndex, string action)\n        {\n            var controller = this.FindPlayerController(playerIndex);\n            if (controller == null) return null;\n\n            string fieldName = action switch\n            {\n                \"melee_attack\" => \"meleeAttackPressed\",\n                \"ranged_attack\" => \"rangedAttackPressed\",\n                \"throw_attack\" => \"throwAttackPressed\",\n                \"special_ability\" => \"specialAbilityPressed\",\n                _ => null\n            };\n\n            if (fieldName == null) return null;\n\n            var field = typeof(PlayerController).GetField($\"<{fieldName}>k__BackingField\",\n                BindingFlags.NonPublic | BindingFlags.Instance);\n            if (field != null)\n            {\n                field.SetValue(controller, true);\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"action\"] = action,\n                    [\"playerIndex\"] = playerIndex,\n                    [\"method\"] = \"reflection\"\n                };\n            }\n\n            return null;\n        }\n\n        private PlayerController FindPlayerController(int playerIndex)\n        {\n            var gm = GameManager.instance;\n            if (gm != null && gm.players != null)\n            {\n                for (int i = 0; i < gm.players.Count; i++)\n                {\n                    if (gm.players[i].playerIndex == playerIndex && gm.players[i].controller != null)\n                    {\n                        return gm.players[i].controller;\n                    }\n                }\n            }\n\n            var controllers = Object.FindObjectsByType<PlayerController>(FindObjectsSortMode.None);\n            foreach (var ctrl in controllers)\n            {\n                if (ctrl.playerIndex == playerIndex)\n                {\n                    return ctrl;\n                }\n            }\n\n            return null;\n        }\n    }\n}\n"
+    },
+    "tool_use_id": "toolu_01LMdpKeDtvYHdT9XA2uwsTt"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-unity__recompile_scripts",
+    "tool_input": {},
+    "tool_use_id": "toolu_01Ga8HJajY1hH4Ssx4Q4XDTz"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "enter"
+    },
+    "tool_use_id": "toolu_01HXxYL13hHB89qBnRWjRt7M"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__query_game_state",
+    "tool_input": {
+      "query": "full"
+    },
+    "tool_use_id": "toolu_01Re4Eytq6FXactN56h8uUDL"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__get_playtest_logs",
+    "tool_input": {
+      "filter": "error"
+    },
+    "tool_use_id": "toolu_017KqG6PzX7ENr9xUtXhFVbv"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__get_playtest_logs",
+    "tool_input": {
+      "filter": "all",
+      "count": 10
+    },
+    "tool_use_id": "toolu_01Q6AvEG5MrY1Ma57hdR3jLu"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "exit"
+    },
+    "tool_use_id": "toolu_01FjuPZ43iijJ8qJVvnu2zf9"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\IPlaytestBridge.cs"
+    },
+    "tool_use_id": "toolu_01ULjSYchMjXope7Gx3yLBS3"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\IPlaytestBridge.cs",
+      "content": "using UnityEngine.InputSystem;\nusing Newtonsoft.Json.Linq;\n\nnamespace McpPlaytest\n{\n    /// <summary>\n    /// Implement this interface to provide game state information to the MCP Playtest server.\n    /// Register your implementation via PlaytestBridge.RegisterGameState().\n    /// </summary>\n    public interface IPlaytestGameState\n    {\n        JObject QueryFullState();\n        JObject QueryPlayers();\n        JObject QueryRound();\n        JObject QueryGameMode();\n    }\n\n    /// <summary>\n    /// Implement this interface to allow the MCP Playtest server to simulate input\n    /// on your player controllers. Register via PlaytestBridge.RegisterInputReceiver().\n    /// </summary>\n    public interface IPlaytestInputReceiver\n    {\n        PlayerInput FindPlayerInput(int playerIndex);\n        JObject SimulateButtonPress(int playerIndex, string action);\n    }\n\n    /// <summary>\n    /// Static registry for playtest bridge implementations.\n    /// Game-specific bridges register themselves here (typically in [InitializeOnLoad] or on play mode enter).\n    /// </summary>\n    public static class PlaytestBridge\n    {\n        public static IPlaytestGameState GameState { get; private set; }\n        public static IPlaytestInputReceiver InputReceiver { get; private set; }\n\n        public static void RegisterGameState(IPlaytestGameState bridge)\n        {\n            GameState = bridge;\n        }\n\n        public static void RegisterInputReceiver(IPlaytestInputReceiver bridge)\n        {\n            InputReceiver = bridge;\n        }\n\n        public static void Clear()\n        {\n            GameState = null;\n            InputReceiver = null;\n        }\n    }\n}\n"
+    },
+    "tool_use_id": "toolu_018yeAM26fd3tcL4cVcPPzeK"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Tools\\QueryGameStateTool.cs",
+      "content": "using Newtonsoft.Json.Linq;\n\nnamespace McpPlaytest\n{\n    public class QueryGameStateTool : PlaytestToolBase\n    {\n        public QueryGameStateTool()\n        {\n            this.Name = \"query_game_state\";\n            this.Description = \"Query runtime game state: full, players, round, or game_mode\";\n        }\n\n        public override JObject Execute(JObject parameters)\n        {\n            var query = parameters[\"query\"]?.ToString() ?? \"full\";\n\n            var bridge = PlaytestBridge.GameState;\n            if (bridge == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = false,\n                    [\"error\"] = \"No IPlaytestGameState registered. Register a bridge via PlaytestBridge.RegisterGameState() to enable game state queries.\",\n                    [\"isPlayMode\"] = UnityEditor.EditorApplication.isPlaying\n                };\n            }\n\n            switch (query)\n            {\n                case \"full\":\n                    return bridge.QueryFullState();\n                case \"players\":\n                    return bridge.QueryPlayers();\n                case \"round\":\n                    return bridge.QueryRound();\n                case \"game_mode\":\n                    return bridge.QueryGameMode();\n                default:\n                    return PlaytestSocketHandler.CreateErrorResponse($\"Unknown query: {query}. Valid: full, players, round, game_mode\", \"validation_error\");\n            }\n        }\n    }\n}\n"
+    },
+    "tool_use_id": "toolu_01ES1oYVUbfybVGX9wu5NnxU"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Utils\\InputSimulator.cs"
+    },
+    "tool_use_id": "toolu_01XjMrddW4prRAZFnMwGBxWr"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Utils\\InputSimulator.cs",
+      "old_string": "        private static IPlaytestInputReceiver FindInputReceiverBridge()\n        {\n            var monoBehaviours = UnityEngine.Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);\n            foreach (var mb in monoBehaviours)\n            {\n                if (mb is IPlaytestInputReceiver receiver)\n                {\n                    return receiver;\n                }\n            }\n\n            return null;\n        }",
+      "new_string": "        private static IPlaytestInputReceiver FindInputReceiverBridge()\n        {\n            return PlaytestBridge.InputReceiver;\n        }",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01Rqbnp9QMfC46ipSLmc3xez"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\BomberSquadPlaytestBridge.cs",
+      "content": "using System.Reflection;\nusing Newtonsoft.Json.Linq;\nusing UnityEditor;\nusing UnityEngine;\nusing UnityEngine.InputSystem;\n\nnamespace McpPlaytest\n{\n    /// <summary>\n    /// BomberSquad-specific implementation of the playtest bridge interfaces.\n    /// Auto-registers when entering Play Mode via [InitializeOnLoad].\n    ///\n    /// For other projects: create your own class implementing IPlaytestGameState\n    /// and/or IPlaytestInputReceiver and register via PlaytestBridge.RegisterGameState()\n    /// and PlaytestBridge.RegisterInputReceiver().\n    /// </summary>\n    [InitializeOnLoad]\n    public class BomberSquadPlaytestBridge : IPlaytestGameState, IPlaytestInputReceiver\n    {\n        private static BomberSquadPlaytestBridge _instance;\n\n        static BomberSquadPlaytestBridge()\n        {\n            EditorApplication.playModeStateChanged -= OnPlayModeChanged;\n            EditorApplication.playModeStateChanged += OnPlayModeChanged;\n        }\n\n        private static void OnPlayModeChanged(PlayModeStateChange state)\n        {\n            if (state == PlayModeStateChange.EnteredPlayMode)\n            {\n                _instance = new BomberSquadPlaytestBridge();\n                PlaytestBridge.RegisterGameState(_instance);\n                PlaytestBridge.RegisterInputReceiver(_instance);\n            }\n            else if (state == PlayModeStateChange.ExitingPlayMode)\n            {\n                PlaytestBridge.Clear();\n                _instance = null;\n            }\n        }\n\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n        // IPlaytestGameState\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n\n        public JObject QueryFullState()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"isPlayMode\"] = EditorApplication.isPlaying,\n                    [\"gameManagerFound\"] = false,\n                    [\"message\"] = \"GameManager not found. Is a scene with GameManager loaded?\"\n                };\n            }\n\n            var result = new JObject\n            {\n                [\"success\"] = true,\n                [\"isPlayMode\"] = EditorApplication.isPlaying,\n                [\"gameManagerFound\"] = true,\n                [\"currentState\"] = gm.currentState.ToString(),\n                [\"currentRoundNumber\"] = gm.currentRoundNumber,\n                [\"alivePlayerCount\"] = gm.GetAlivePlayerCount(),\n                [\"totalPlayerCount\"] = gm.players?.Count ?? 0\n            };\n\n            result[\"players\"] = this.BuildPlayersArray(gm);\n            result[\"round\"] = this.BuildRoundInfo(gm);\n            result[\"gameMode\"] = this.BuildGameModeInfo(gm);\n\n            return result;\n        }\n\n        public JObject QueryPlayers()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"gameManagerFound\"] = false,\n                    [\"players\"] = new JArray()\n                };\n            }\n\n            return new JObject\n            {\n                [\"success\"] = true,\n                [\"gameManagerFound\"] = true,\n                [\"players\"] = this.BuildPlayersArray(gm)\n            };\n        }\n\n        public JObject QueryRound()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"gameManagerFound\"] = false\n                };\n            }\n\n            return new JObject\n            {\n                [\"success\"] = true,\n                [\"gameManagerFound\"] = true,\n                [\"round\"] = this.BuildRoundInfo(gm)\n            };\n        }\n\n        public JObject QueryGameMode()\n        {\n            var gm = GameManager.instance;\n            if (gm == null)\n            {\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"gameManagerFound\"] = false\n                };\n            }\n\n            return new JObject\n            {\n                [\"success\"] = true,\n                [\"gameManagerFound\"] = true,\n                [\"gameMode\"] = this.BuildGameModeInfo(gm)\n            };\n        }\n\n        private JArray BuildPlayersArray(GameManager gm)\n        {\n            var playersArray = new JArray();\n\n            if (gm.players == null) return playersArray;\n\n            for (int i = 0; i < gm.players.Count; i++)\n            {\n                var pd = gm.players[i];\n                var playerObj = new JObject\n                {\n                    [\"playerIndex\"] = pd.playerIndex,\n                    [\"score\"] = pd.score,\n                    [\"kills\"] = pd.kills,\n                    [\"deaths\"] = pd.deaths,\n                    [\"suicides\"] = pd.suicides,\n                    [\"isReady\"] = pd.isReady\n                };\n\n                if (pd.controller != null)\n                {\n                    var pos = pd.controller.transform.position;\n                    playerObj[\"position\"] = new JObject\n                    {\n                        [\"x\"] = pos.x,\n                        [\"y\"] = pos.y,\n                        [\"z\"] = pos.z\n                    };\n\n                    var currentState = pd.controller.stateMachine?.currentState;\n                    playerObj[\"currentState\"] = currentState?.GetType().Name ?? \"Unknown\";\n                    playerObj[\"isAlive\"] = currentState != pd.controller.playerDeathState;\n                    playerObj[\"isActive\"] = pd.controller.gameObject.activeSelf;\n                }\n                else\n                {\n                    playerObj[\"position\"] = null;\n                    playerObj[\"currentState\"] = \"NoController\";\n                    playerObj[\"isAlive\"] = false;\n                    playerObj[\"isActive\"] = false;\n                }\n\n                playersArray.Add(playerObj);\n            }\n\n            return playersArray;\n        }\n\n        private JObject BuildRoundInfo(GameManager gm)\n        {\n            var roundObj = new JObject\n            {\n                [\"currentRoundNumber\"] = gm.currentRoundNumber,\n                [\"currentState\"] = gm.currentState.ToString()\n            };\n\n            if (gm.currentRound != null)\n            {\n                roundObj[\"elapsedTime\"] = gm.currentRound.elapsedTime;\n                roundObj[\"remainingTime\"] = gm.currentRound.remainingTime;\n            }\n\n            return roundObj;\n        }\n\n        private JObject BuildGameModeInfo(GameManager gm)\n        {\n            if (gm.gameMode == null)\n            {\n                return new JObject { [\"available\"] = false };\n            }\n\n            var mode = gm.gameMode;\n            return new JObject\n            {\n                [\"available\"] = true,\n                [\"modeName\"] = mode.modeName,\n                [\"description\"] = mode.description,\n                [\"numberOfRounds\"] = mode.numberOfRounds,\n                [\"roundDuration\"] = mode.roundDuration,\n                [\"roundStartDelay\"] = mode.roundStartDelay,\n                [\"roundEndDelay\"] = mode.roundEndDelay,\n                [\"pointsPerKill\"] = mode.pointsPerKill,\n                [\"suicidePenalty\"] = mode.suicidePenalty,\n                [\"respawnDelay\"] = mode.respawnDelay,\n                [\"maxPlayers\"] = mode.maxPlayers,\n                [\"useLastManStanding\"] = mode.useLastManStanding,\n                [\"allowMeleeWeapons\"] = mode.allowMeleeWeapons,\n                [\"allowRangedWeapons\"] = mode.allowRangedWeapons,\n                [\"allowThrowWeapons\"] = mode.allowThrowWeapons,\n                [\"allowSpecialAbility\"] = mode.allowSpecialAbility\n            };\n        }\n\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n        // IPlaytestInputReceiver\n        // \u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\u00e2\u201d\u20ac\n\n        public PlayerInput FindPlayerInput(int playerIndex)\n        {\n            var controller = this.FindPlayerController(playerIndex);\n            if (controller == null) return null;\n\n            return controller.playerInput;\n        }\n\n        public JObject SimulateButtonPress(int playerIndex, string action)\n        {\n            var controller = this.FindPlayerController(playerIndex);\n            if (controller == null) return null;\n\n            string fieldName = action switch\n            {\n                \"melee_attack\" => \"meleeAttackPressed\",\n                \"ranged_attack\" => \"rangedAttackPressed\",\n                \"throw_attack\" => \"throwAttackPressed\",\n                \"special_ability\" => \"specialAbilityPressed\",\n                _ => null\n            };\n\n            if (fieldName == null) return null;\n\n            var field = typeof(PlayerController).GetField($\"<{fieldName}>k__BackingField\",\n                BindingFlags.NonPublic | BindingFlags.Instance);\n            if (field != null)\n            {\n                field.SetValue(controller, true);\n                return new JObject\n                {\n                    [\"success\"] = true,\n                    [\"action\"] = action,\n                    [\"playerIndex\"] = playerIndex,\n                    [\"method\"] = \"reflection\"\n                };\n            }\n\n            return null;\n        }\n\n        private PlayerController FindPlayerController(int playerIndex)\n        {\n            var gm = GameManager.instance;\n            if (gm != null && gm.players != null)\n            {\n                for (int i = 0; i < gm.players.Count; i++)\n                {\n                    if (gm.players[i].playerIndex == playerIndex && gm.players[i].controller != null)\n                    {\n                        return gm.players[i].controller;\n                    }\n                }\n            }\n\n            var controllers = Object.FindObjectsByType<PlayerController>(FindObjectsSortMode.None);\n            foreach (var ctrl in controllers)\n            {\n                if (ctrl.playerIndex == playerIndex)\n                {\n                    return ctrl;\n                }\n            }\n\n            return null;\n        }\n    }\n}\n"
+    },
+    "tool_use_id": "toolu_01TkqhXiToaSeEiLvrnHPF9b"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-unity__recompile_scripts",
+    "tool_input": {},
+    "tool_use_id": "toolu_012rPSkLZNK39TekE8Q4SSMX"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "enter"
+    },
+    "tool_use_id": "toolu_01GUB2gsTNitjZRVWUspWeLv"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__query_game_state",
+    "tool_input": {
+      "query": "full"
+    },
+    "tool_use_id": "toolu_01M9v2sXzSK8S37RFeSame6s"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__capture_screenshot",
+    "tool_input": {
+      "width": 960,
+      "height": 540
+    },
+    "tool_use_id": "toolu_01R66peXGB64K8drCQroSu4S"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__get_playtest_logs",
+    "tool_input": {
+      "filter": "all",
+      "count": 5
+    },
+    "tool_use_id": "toolu_01AckbwpqRWHKkshorxedd8K"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__get_playtest_logs",
+    "tool_input": {
+      "filter": "error"
+    },
+    "tool_use_id": "toolu_013LvV88bFapJMqGiSTyz9DW"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "pause"
+    },
+    "tool_use_id": "toolu_01VHjTkhp1mqZQgrymChvnej"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "unpause"
+    },
+    "tool_use_id": "toolu_01DmzNmtQPBCnwtbDmoPTgBA"
+  },
+  {
+    "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\51d432dd-2b04-47f7-b139-0ff495d0df2b.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "mcp__mcp-playtest__play_mode_control",
+    "tool_input": {
+      "action": "exit"
+    },
+    "tool_use_id": "toolu_011aHjpPjFLVhnfGkWDdvB6Z"
   }
 ]

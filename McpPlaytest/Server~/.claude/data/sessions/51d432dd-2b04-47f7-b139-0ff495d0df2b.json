@@ -1,0 +1,12 @@
+{
+  "session_id": "51d432dd-2b04-47f7-b139-0ff495d0df2b",
+  "prompts": [
+    "join_player doesn't looks like a good name, surely it does more than just join as a player right?",
+    "I also want to know, would that tool be considered universal for any unity project?",
+    "are there any down sides of using that method?",
+    "hold on, I didn't mean for you to change it though. Just make sure it can be used universally without too much of a down side",
+    "overall, make sure the MCPPlaytest is also pretty much a universal tool for unity 6",
+    "one last thing, it's concerning the screenshot and video capacities. I want to make sure that you are able to take screenshots and videos even if the unity window isn't focused or at the forfront of the screen as I often have other windows overlapping it which I don't want to hinder your work with, but I want those windows to remain at the front of the screen so that I can still work.",
+    "ok, I would like you to test the whole Mcp again to make sure that everything works just fine now"
+  ]
+}
