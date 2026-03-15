@@ -1,0 +1,10 @@
+[
+  {
+    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "hook_event_name": "SessionEnd",
+    "reason": "prompt_input_exit",
+    "logged_at": "2026-03-15T00:45:49.789719"
+  }
+]

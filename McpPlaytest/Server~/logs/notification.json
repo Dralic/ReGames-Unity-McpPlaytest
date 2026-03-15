@@ -1,0 +1,10 @@
+[
+  {
+    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input",
+    "notification_type": "idle_prompt"
+  }
+]

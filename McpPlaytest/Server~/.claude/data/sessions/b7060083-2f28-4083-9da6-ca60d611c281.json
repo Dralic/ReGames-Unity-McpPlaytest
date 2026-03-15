@@ -1,0 +1,9 @@
+{
+  "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
+  "prompts": [
+    "are you able to handle the hook change yourself?",
+    "can you tell me what part I need to change?",
+    "ok, I just deleted hooks as it was the only one. Is there anything else you need from me?",
+    "ok let me restart then. Were you done with the changes? If not, take notes so that you can remember where you were once I restart"
+  ]
+}

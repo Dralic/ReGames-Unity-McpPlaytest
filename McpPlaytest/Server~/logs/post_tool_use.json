@@ -1,0 +1,22 @@
+[
+  {
+    "session_id": "b7060083-2f28-4083-9da6-ca60d611c281",
+    "transcript_path": "C:\\Users\\maxim\\.claude\\projects\\D--Projects-BomberSquad\\b7060083-2f28-4083-9da6-ca60d611c281.jsonl",
+    "cwd": "D:\\Projects\\BomberSquad\\Assets\\Editor\\McpPlaytest\\Server~",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "cd \"D:/Projects/BomberSquad/Assets/Editor/McpPlaytest/Server~\" && npm run build 2>&1",
+      "description": "Rebuild the Node.js MCP server TypeScript"
+    },
+    "tool_response": {
+      "stdout": "> mcp-playtest-server@1.0.0 build\n> tsc",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false,
+      "noOutputExpected": false
+    },
+    "tool_use_id": "toolu_01AgejyyGivBkANYza6drhX1"
+  }
+]
