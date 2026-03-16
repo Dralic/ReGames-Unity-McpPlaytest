@@ -219,7 +219,7 @@ namespace McpPlaytest
 
         private static PlayerInput FindPlayerInput(int playerIndex)
         {
-            // Try the bridge interface first
+            // Try the bridge interface first (game-specific lookup)
             var bridge = FindInputReceiverBridge();
             if (bridge != null)
             {
@@ -227,13 +227,21 @@ namespace McpPlaytest
                 if (found != null) return found;
             }
 
-            // Universal fallback: search all PlayerInput components in the scene
+            // Fallback: search joined players via PlayerInput.all matching by playerIndex
             foreach (var pi in PlayerInput.all)
             {
                 if (pi.playerIndex == playerIndex)
                 {
                     return pi;
                 }
+            }
+
+            // Last resort: find pre-placed PlayerInput components that haven't "joined"
+            // (their playerIndex is -1), match by array index instead
+            var allInputs = UnityEngine.Object.FindObjectsByType<PlayerInput>(FindObjectsSortMode.None);
+            if (playerIndex >= 0 && playerIndex < allInputs.Length)
+            {
+                return allInputs[playerIndex];
             }
 
             return null;
